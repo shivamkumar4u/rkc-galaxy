@@ -55,10 +55,17 @@
     <style type="text/tailwindcss">
         @layer utilities {
             .text-gradient {
-                @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600;
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-image: linear-gradient(to right, var(--color-orange-500), var(--color-orange-400), var(--color-orange-600));
             }
             .glass-effect {
-                @apply backdrop-blur-xl bg-white/5 border border-white/10;
+                backdrop-filter: blur(24px);
+                background-color: rgb(255 255 255 / 0.05);
+                border-width: 1px;
+                border-style: solid;
+                border-color: rgb(255 255 255 / 0.1);
             }
             .bg-grid-white {
                 background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
@@ -757,7 +764,7 @@
                     { id: 'laptops', name: 'Laptops', description: 'Premium HP, Lenovo, and Acer laptops for every need.', image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&q=80&w=800', icon: 'laptop' },
                     { id: 'desktops', name: 'Desktops', description: 'High-performance workstations and home computers.', image: 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=800', icon: 'monitor' },
                     { id: 'printers', name: 'Printers', description: 'Reliable printing solutions from Epson, Canon, and Brother.', image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=800', icon: 'printer' },
-                    { id: 'cctv', name: 'CCTV Cameras', description: 'Advanced security systems for your home and business.', image: 'image/cctv2.jpg', icon: 'camera' },
+                    { id: 'cctv', name: 'CCTV Cameras', description: 'Advanced security systems for your home and business.', image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=800', icon: 'camera' },
                     { id: 'networking', name: 'Networking', description: 'High-speed routers and switches for seamless connectivity.', image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800', icon: 'wifi' },
                     { id: 'accessories', name: 'Accessories', description: 'Essential peripherals and electronics from top brands.', image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&q=80&w=800', icon: 'mouse' }
                 ],
